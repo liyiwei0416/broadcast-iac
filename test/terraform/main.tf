@@ -112,5 +112,3 @@ resource "nxos_pim_interface" "pim_eth1-1" {
 
 // Save Configuration
 
-resource "nxos_save_config" "save" {
-}
