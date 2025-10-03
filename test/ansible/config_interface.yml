@@ -1,0 +1,20 @@
+---
+- name: Configure Ethernet Interface Eth1/4 as Routed Port on Cisco Nexus
+  hosts: switch  # 确保这个组名在你的inventory文件中定义
+  gather_facts: no       # 禁用事实收集以加快执行速度
+
+  tasks:
+    - name: Apply L3 Interface, OSPF, and PIM configuration to Eth1/4
+      # 使用 cisco.nxos.nxos_config 模块来管理配置
+      cisco.nxos.nxos_config:
+        # 'parents' 指定了要进入的配置模式，这里是接口配置模式
+        parents:
+          - interface ethernet 1/4
+        # 'lines' 包含在该模式下要执行的CLI命令
+        lines: "{{ interface_l3_config }}"
+        
+      register: config_output
+
+    - name: Display configuration status
+      debug:
+        msg: "Configuration for Eth1/4 applied successfully. Changes: {{ config_output.changed }}"

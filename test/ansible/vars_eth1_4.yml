@@ -1,0 +1,30 @@
+# --- 替换以下变量为您实际需要的配置 ---
+
+# IP 地址和子网掩码 (例如: 10.10.10.1/24)
+INTERFACE_IP_ADDRESS: "10.10.10.1/30" 
+
+# OSPF 进程 ID (例如: 100)
+OSPF_PROCESS_ID: "100" 
+
+# OSPF 区域 ID (例如: 0.0.0.0)
+OSPF_AREA_ID: "0.0.0.0" 
+
+# --- Ansible 实际发送的 CLI 命令列表 ---
+
+interface_l3_config:
+  # 转换为L3路由端口并启用
+  - no switchport
+  - no shutdown
+  
+  # 配置IP地址
+  - ip address {{ INTERFACE_IP_ADDRESS }}
+  
+  # OSPF配置
+  - ip router ospf {{ OSPF_PROCESS_ID }} area {{ OSPF_AREA_ID }}
+  # 注意：在 Cisco NX-OS 上 'ip ospf passive-interface' 仅用于接口模式
+  - ip ospf passive-interface 
+  
+  # PIM 配置
+  - ip pim sparse-mode
+  # 注意：在 Cisco NX-OS 上 'ip pim passive' 仅用于接口模式
+  - ip pim passive
