@@ -1,0 +1,65 @@
+switchname,interface,ip_address,description,mode,vlan,ospf_passive,pim_passive,ptp_enable,ptp_role_master
+spine_m,Eth1/1,10.6.1.1,SPG9000 M,routed,,TRUE,TRUE,TRUE,
+spine_m,Eth1/2,10.6.2.1,SPG9000 B,routed,,TRUE,TRUE,TRUE,
+spine_m,Eth1/3,10.6.3.1,Meinberg,routed,,TRUE,TRUE,TRUE,
+spine_m,Eth1/4,,,,,,,,
+spine_m,Eth1/5,10.6.5.1,Neuron 1-1,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/6,10.6.6.1,Neuron 1-2,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/7,10.6.7.1,Neuron 2-1,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/8,10.6.8.1,Neuron 2-2,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/9,10.6.9.1,Neuron 3-1,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/10,10.6.10.1,Neuron 3-2,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/11,10.6.11.1,Neuron 4-1,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/12,10.6.12.1,Neuron 4-2,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/13,10.6.13.1,Neuron 5-1,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/14,10.6.14.1,Neuron 5-2,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/15,10.6.15.1,Neuron 6-1,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/16,10.6.16.1,Neuron 6-2,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/17,10.6.17.1,Neuron 7-1,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/18,10.6.18.1,Neuron 7-2,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/19,10.6.19.1,Neuron 8-1,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/20,10.6.20.1,Neuron 8-2,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/21,10.6.21.1,Evertz-1,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/22,10.6.22.1,Evertz-2,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/23,10.6.23.1,Evertz-3,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/24,10.6.24.1,Evertz-4,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/25,10.6.25.1,Evertz-5,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/26,,,,,,,,
+spine_m,Eth1/27,,,,,,,,
+spine_m,Eth1/28,,,,,,,,
+spine_m,Eth1/29,10.6.29.1,Manifold-1,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/30,10.6.30.1,Manifold-2,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/31,10.6.31.1,Manifold-3,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/32,10.6.32.1,Manifold-4,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/33,10.6.33.1,CXP 100G-1,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/34,10.6.34.1,CXP 100G-2,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/35,10.6.35.1,CXP 100G-3,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/36,10.6.36.1,CXP 100G-4,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/37,,,,,,,,
+spine_m,Eth1/38,,,,,,,,
+spine_m,Eth1/39,,,,,,,,
+spine_m,Eth1/40,,,,,,,,
+spine_m,Eth1/41,10.6.100.90,eMerge Port 23,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/42,10.6.100.94,eMerge Port 24,routed,,TRUE,TRUE,TRUE,TRUE
+spine_m,Eth1/43,10.6.100.98,eMerge Port 25,routed,,TRUE,TRUE,,
+spine_m,Eth1/44,10.6.100.102,eMerge Port 26,routed,,TRUE,TRUE,,
+spine_m,Eth1/45,10.6.100.106,eMerge Port 27,routed,,TRUE,TRUE,,
+spine_m,Eth1/46,10.6.100.110,eMerge Port 28,routed,,TRUE,TRUE,,
+spine_m,Eth1/47,10.6.47.1,Leaf1 Port 28,routed,,,TRUE,TRUE,TRUE
+spine_m,Eth1/48,10.6.48.1,Leaf1 Port 29,routed,,,TRUE,TRUE,TRUE
+spine_m,Eth1/49,10.6.49.1,Leaf1 Port 30,routed,,,TRUE,,
+spine_m,Eth1/50,10.6.50.1,Leaf1 Port 31,routed,,,TRUE,,
+spine_m,Eth1/51,10.6.51.1,Leaf1 Port 32,routed,,,TRUE,,
+spine_m,Eth1/52,10.6.52.1,Leaf1 Port 33,routed,,,TRUE,,
+spine_m,Eth1/53,10.6.53.1,Leaf1 Port 34,routed,,,TRUE,,
+spine_m,Eth1/54,10.6.54.1,Leaf1 Port 35,routed,,,TRUE,,
+spine_m,Eth1/55,10.6.55.1,Leaf1 Port 36,routed,,,TRUE,,
+spine_m,Eth1/56,10.6.56.1,Leaf2 Port 29,routed,,,TRUE,TRUE,TRUE
+spine_m,Eth1/57,10.6.57.1,Leaf2 Port 30,routed,,,TRUE,TRUE,TRUE
+spine_m,Eth1/58,10.6.58.1,Leaf2 Port 31,routed,,,TRUE,,
+spine_m,Eth1/59,10.6.59.1,Leaf2 Port 32,routed,,,TRUE,,
+spine_m,Eth1/60,10.6.60.1,Leaf2 Port 33,routed,,,TRUE,,
+spine_m,Eth1/61,10.6.61.1,Leaf2 Port 34,routed,,,TRUE,,
+spine_m,Eth1/62,10.6.62.1,Leaf2 Port 35,routed,,,TRUE,,
+spine_m,Eth1/63,10.6.63.1,Leaf2 Port 36,routed,,,TRUE,,
+spine_m,Eth1/64,10.6.64.1,Leaf3 Port 53,routed,,,TRUE,TRUE,TRUE

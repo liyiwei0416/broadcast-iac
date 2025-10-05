@@ -1,0 +1,77 @@
+switchname,interface,ip_address,description,mode,vlan,ospf_passive,pim_passive,ptp_enable,ptp_role_master
+leaf1_m,Eth1/1/1,10.6.101.1,CCU 1,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/1/2,10.6.101.5,CCU 2,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/1/3,10.6.101.9,CCU 3,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/1/4,10.6.101.13,CCU 4,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/2/1,10.6.102.1,CCU 5,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/2/2,10.6.102.5,CCU 6,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/2/3,10.6.102.9,CCU 7,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/2/4,10.6.102.13,CCU 8,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/3/1,10.6.103.1,CCU 9,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/3/2,10.6.103.5,CCU 10,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/3/3,10.6.103.9,CCU 11,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/3/4,10.6.103.13,CCU 12,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/4/1,10.6.104.1,CCU 13,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/4/2,10.6.104.5,CCU 14,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/4/3,10.6.104.9,CCU 15,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/4/4,10.6.104.13,CCU 16,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/5/1,10.6.105.1,UCP-1,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/5/2,10.6.105.5,UCP-1,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/6/1,10.6.106.1,UCP-2,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/6/2,10.6.106.5,UCP-2,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/7/1,10.6.107.1,UCP-3,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/7/2,10.6.107.5,UCP-3,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/8/1,10.6.108.1,UCP-4,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/8/2,10.6.108.5,UCP-4,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/9/1,10.6.109.1,CXP 25G-1,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/9/2,10.6.109.5,CXP 25G-1,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/9/3,10.6.109.9,CXP 25G-1,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/9/4,10.6.109.13,CXP 25G-1,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/10/1,10.6.110.1,CXP 25G-1,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/10/2,10.6.110.5,CXP 25G-1,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/10/3,10.6.110.9,CXP 25G-1,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/10/4,10.6.110.13,CXP 25G-1,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/11/1,10.6.111.1,CXP 25G-2,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/11/2,10.6.111.5,CXP 25G-2,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/11/3,10.6.111.9,CXP 25G-2,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/11/4,10.6.111.13,CXP 25G-2,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/12/1,10.6.112.1,CXP 25G-2,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/12/2,10.6.112.5,CXP 25G-2,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/12/3,10.6.112.9,CXP 25G-2,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/12/4,10.6.112.13,CXP 25G-2,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/13/1,10.6.113.1,CXP 25G-3,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/13/2,10.6.113.5,CXP 25G-3,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/13/3,10.6.113.9,CXP 25G-3,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/13/4,10.6.113.13,CXP 25G-3,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/14/1,10.6.114.1,CXP 25G-3,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/14/2,10.6.114.5,CXP 25G-3,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/14/3,10.6.114.9,CXP 25G-3,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/14/4,10.6.114.13,CXP 25G-3,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/15/1,10.6.115.1,LV 5600,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/15/2,10.6.115.5,,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/15/3,10.6.115.9,,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/15/4,10.6.115.13,,routed,,TRUE,TRUE,TRUE,TRUE
+leaf1_m,Eth1/16/1,10.6.116.1,VideoIPath 1,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/16/2,10.6.116.5,VideoIPath 2,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/16/3,10.6.116.9,,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/16/4,10.6.116.13,,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/17,,,,,,,,
+leaf1_m,Eth1/18,,,,,,,,
+leaf1_m,Eth1/19,,,,,,,,
+leaf1_m,Eth1/20,,,,,,,,
+leaf1_m,Eth1/21,,,,,,,,
+leaf1_m,Eth1/22,,,,,,,,
+leaf1_m,Eth1/23,,,,,,,,
+leaf1_m,Eth1/24,,,,,,,,
+leaf1_m,Eth1/25,10.6.100.114,eMerge Port 29,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/26,10.6.100.118,eMerge Port 30,routed,,TRUE,TRUE,,
+leaf1_m,Eth1/27,,,,,,,,
+leaf1_m,Eth1/28,10.6.47.2,Spine Port 47,routed,,,TRUE,TRUE,
+leaf1_m,Eth1/29,10.6.48.2,Spine Port 48,routed,,,TRUE,TRUE,
+leaf1_m,Eth1/30,10.6.49.2,Spine Port 49,routed,,,TRUE,,
+leaf1_m,Eth1/31,10.6.50.2,Spine Port 50,routed,,,TRUE,,
+leaf1_m,Eth1/32,10.6.51.2,Spine Port 51,routed,,,TRUE,,
+leaf1_m,Eth1/33,10.6.52.2,Spine Port 52,routed,,,TRUE,,
+leaf1_m,Eth1/34,10.6.53.2,Spine Port 53,routed,,,TRUE,,
+leaf1_m,Eth1/35,10.6.54.2,Spine Port 54,routed,,,TRUE,,
+leaf1_m,Eth1/36,10.6.55.2,Spine Port 55,routed,,,TRUE,,
