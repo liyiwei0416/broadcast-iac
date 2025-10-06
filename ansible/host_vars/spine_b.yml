@@ -1,0 +1,5 @@
+switchname: "s6_spine_b"
+router_id: "2.2.2.2"
+ptp_priority1: "10"
+ptp_priority2: "11"
+ptp_source: "2.2.2.2"

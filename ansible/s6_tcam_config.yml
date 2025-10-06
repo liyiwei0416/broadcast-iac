@@ -1,0 +1,15 @@
+- name: Configure S6-Cube Cisco TCAM resource allocation
+  hosts: s6_switches
+  gather_facts: no
+
+
+  tasks:
+    - name: Config TCAM resource allocation
+      cisco.nxos.nxos_config:
+        lines: 
+          - "hardware access-list tcam region ing-racl 256"
+          - "hardware access-list tcam region ing-l3-vlan-qos 256"
+          - "hardware access-list tcam region ing-nbm 1536"
+          - "copy running-config startup-config"
+
+      ignore_errors: yes

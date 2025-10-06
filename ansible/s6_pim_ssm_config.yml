@@ -1,0 +1,13 @@
+- name: Configure S6-Cube Cisco SSM Range
+  hosts: s6_switches
+  gather_facts: no
+
+
+  tasks:
+    - name: Config SSM range
+      cisco.nxos.nxos_config:
+        lines:
+          - "ip pim ssm route-map nbm-ssm-range"
+          - "copy running-config startup-config"
+
+      ignore_errors: yes

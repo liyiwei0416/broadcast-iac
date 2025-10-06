@@ -1,0 +1,70 @@
+# access and routed interface config
+        - name: config {{ interface_item.interface }} as access port (VLAN {{ interface_item.vlan }})
+          cisco.nxos.nxos_config:
+            parents:
+              - "interface {{ interface_item.interface }}"
+            lines:
+              - "description {{ interface_item.description }}"
+              - "switchport mode access"
+              - "switchport access vlan {{ interface_item.vlan }}"
+              - "ptp vlan {{ interface_item.vlan }}"
+              - "no shutdown"
+              
+          when: 
+            - interface_item.mode | lower == 'access'
+            - interface_item.vlan | default('') | length > 0
+
+        # L3 port config
+        - name: config {{ interface_item.interface }} L3 port (IP {{ interface_item.ip_address }})
+          cisco.nxos.nxos_config:
+            parents:
+              - "interface {{ interface_item.interface }}"
+            lines:
+              - "description {{ interface_item.description }}"
+              - "no switchport"
+              - "ip address {{ interface_item.ip_address }}/30"
+              - "ip router ospf 100 area 0.0.0.0" 
+              - "ip pim sparse-mode"
+              - "ip pim passive"
+              - "no shutdown"
+              
+          when: 
+            - interface_item.mode | lower == 'routed'
+            - interface_item.ip_address | default('') | length > 0
+
+        # ospf_passsive
+        - name: config {{ interface_item.interface }} ospf_passive
+          cisco.nxos.nxos_config:
+            parents:
+              - "interface {{ interface_item.interface }}"
+            lines:
+              - "ip ospf passive-interface"
+          when: 
+            - interface_item.ospf_passive | lower == 'true'
+        
+        # interface ptp config
+        - name: config {{ interface_item.interface }} ptp
+          cisco.nxos.nxos_config:
+            parents:
+              - "interface {{ interface_item.interface }}"
+            lines:
+              - "ptp"
+              - "ptp delay-request minimum interval smpte-2059-2 -3"
+              - "ptp announce interval smpte-2059-2 0"
+              - "ptp announce timeout smpte-2059-2 3"
+              - "ptp sync interval smpte-2059-2 -3"
+              
+          when: 
+            - interface_item.ptp_enable | lower == 'true'
+            
+            
+        # ptp master config
+        - name: 配置 {{ interface_item.interface }} ptp
+          cisco.nxos.nxos_config:
+            parents:
+              - "interface {{ interface_item.interface }}"
+            lines:
+              - "ptp role master"
+              
+          when: 
+            - interface_item.ptp_role_master | lower == 'true'

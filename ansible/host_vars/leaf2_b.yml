@@ -1,0 +1,5 @@
+switchname: "s6_leaf2_b"
+router_id: "6.6.6.6"
+ptp_priority1: "20"
+ptp_priority2: "23"
+ptp_source: "6.6.6.6"

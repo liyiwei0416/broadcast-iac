@@ -1,0 +1,61 @@
+---
+- name: Configure S6-Cube Cisco Switches
+  hosts: s6_switches
+  gather_facts: no
+
+
+  tasks:
+    - name: Load data and set fact for current host
+      community.general.read_csv:
+        path: './switch_config/s6_{{ inventory_hostname }}.csv'
+        delimiter: ','
+      register: csv_data
+    
+    #- ansible.builtin.debug:
+    #    var: csv_data
+
+    # enable required features
+    - name: Enable required features
+      cisco.nxos.nxos_config:
+        lines: 
+          - "switchname {{ switchname }}"
+          - "feature ospf"
+          - "feature pim"
+          - "feature nxapi"
+          - "nxapi use-vrf management"
+          - "feature ptp"
+          - "feature lldp"
+          - "feature nbm"
+          - "nbm mode pim-passive"
+
+      ignore_errors: yes
+
+    # config ptp
+    - name: config ptp
+      cisco.nxos.nxos_config:
+        lines: 
+          - "clock protocol ptp vdc 1"
+          - "ptp domain 127"
+          - "ptp priority1 {{ ptp_priority1 }}"
+          - "ptp priority2 {{ ptp_priority2 }}"
+          - "ptp source {{ ptp_source }}"
+
+    # config ospf
+    - name: config ospf
+      cisco.nxos.nxos_config:
+        parents:
+          - "router ospf 100"
+        lines: 
+          - "router-id {{ router_id }}"
+
+    # interface config
+    - name: config {{ inventory_hostname }} interfaces
+      # loop through the CSV data for the current host
+      loop: "{{ csv_data.list | selectattr('switchname', 'equalto', inventory_hostname) | list }}"
+      loop_control:
+        loop_var: interface_item
+      
+      include_tasks: interface_config.yml
+
+      # ignore errors for testing
+      ignore_errors: yes
